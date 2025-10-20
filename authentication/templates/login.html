@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+/* Inline styles for a clean, professional login card */
+.login-section { min-height: 100vh; display: flex; align-items: center;}
+.login-card { border-radius: 12px; box-shadow: 0 10px 30px rgba(224, 226, 231, 0.08); overflow: hidden; }
+.login-card .card-body { padding: 2rem 2.25rem; }
+.login-title { font-size: 1.6rem; letter-spacing: 0.6px; color: #e9ecf3; margin-bottom: .25rem; }
+.login-sub { color: #475569; margin-bottom: 1.25rem; }
+.form-control:focus { box-shadow: none; border-color: #60a5fa; }
+.btn-primary-custom { background: linear-gradient(90deg,#2563eb,#60a5fa); border: none; }
+.social a { color: #64748b; font-size: 1.05rem; margin: 0 .5rem; }
+.small-link { color: #64748b; }
+.card-center { background: #ffffff; }
+@media (max-width: 576px) {
+  .login-card .card-body { padding: 1.5rem; }
+}
+</style>
+
+<section class="login-section">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card login-card card-center" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+
+            <div class="mb-md-5 mt-md-4 pb-5">
+
+              <h2 class="fw-bold mb-2 login-title">Sign in</h2>
+              <p class="mb-4 login-sub">Enter your email and password to access your account.</p>
+
+              <div class="mb-3 text-start">
+                <label for="typeEmailX" class="form-label small">Email</label>
+                <input type="email" id="typeEmailX" class="form-control form-control-lg" placeholder="you@example.com" />
+              </div>
+
+              <div class="mb-3 text-start">
+                <label for="typePasswordX" class="form-label small">Password</label>
+                <input type="password" id="typePasswordX" class="form-control form-control-lg" placeholder="Enter password" />
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center mb-4">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="rememberMe">
+                  <label class="form-check-label small" for="rememberMe">Remember me</label>
+                </div>
+                <a class="small-link small" href="#!">Forgot password?</a>
+              </div>
+
+              <button class="btn btn-primary btn-lg w-100 btn-primary-custom" type="submit">Sign in</button>
+
+              <div class="d-flex justify-content-center text-center mt-4 pt-1 social">
+                <a href="#!" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="#!" class="mx-3"><i class="fab fa-twitter"></i></a>
+                <a href="#!" class="ms-3"><i class="fab fa-google"></i></a>
+              </div>
+
+            </div>
+
+            <div>
+              <p class="mb-0">Don't have an account? <a href="#!" class="small-link fw-bold">Sign up</a>
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
